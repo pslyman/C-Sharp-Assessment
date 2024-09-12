@@ -4,7 +4,7 @@ namespace JobNimbusAssessment
 {
     public class Program
     {
-        public static void Main()
+        public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
         }
@@ -89,7 +89,7 @@ namespace JobNimbusAssessment
         [Fact]
         public static void RunTests()
         {
-            Console.Write("TEST SUBSEQUENT BRACKETS\n");
+            // TEST SUBSEQUENT BRACKETS 
             // required tests
             Assert.True(BracketChecker.HasMatchingSubsequentBrackets("<>") == true);
             Assert.True(BracketChecker.HasMatchingSubsequentBrackets("><") == false);
@@ -105,7 +105,7 @@ namespace JobNimbusAssessment
             Assert.True(BracketChecker.HasMatchingSubsequentBrackets("<div>content here</div>") == true);
             Assert.True(BracketChecker.HasMatchingSubsequentBrackets("<div>>syntax error</div>") == false);
 
-            Console.Write("\nTEST MATCHING BRACKETS\n");
+            // TEST MATCHING BRACKETS
             // required tests
             Assert.True(BracketChecker.HasMatchingBrackets("<>") == true);
             Assert.True(BracketChecker.HasMatchingBrackets("><") == false);
@@ -129,3 +129,4 @@ namespace JobNimbusAssessment
 // - Separate out Unit Tests
 // - Add more real world examples
 // - Add two params to the method: `openChar` and `closingChar` to make it configurable. 
+// - Make this a class library, don't need Main()
